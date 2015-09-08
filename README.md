@@ -170,6 +170,9 @@ will be running automated tests on it, using the smile space
 "cs169-grading-space". (Hint: try running the test yourself; there are no
 excuses if even the test we gave you is failing.)
 
+Watch Piazza and the class web site for the link to a form where you will
+have to submit the url to your project. 
+
 
 .You are Done!
 ---
