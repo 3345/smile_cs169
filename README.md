@@ -42,7 +42,7 @@ following code inside the `<head>` element at the end (not `<header>`).
     $(function() {
         Smile.start();
     });
-/script>
+</script>
 ```
 
 This code will load the jQuery library and the Javascript library for our
