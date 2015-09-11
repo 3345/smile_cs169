@@ -266,13 +266,21 @@ But in this project, we'll learn how to do responsive layouts manually and see h
 
 At the bottom of `styles/main.css`, you'll see a `@media screen` definition. `(min-width: 800px)` means the styles within this definition applies for browser screens 800px or wider.
 
-1. Change the layout to show smiles in 2 columns for screens larger than
-   800px, and in 3 columns for screens larger than 1200px.
+1. Change the layout to show smiles in 1 column for screens narrower than
+   800px, in 2 columns for screens between 800px and 1200px,
+   and in 3 columns for screens larger than 1200px.
    You can make use of the
    [column-count](http://www.w3schools.com/cssref/css3_pr_column-count.asp)
    property.
    You can test the responsive styling by dragging your desktop browser window
    larger or smaller than 800px and 1200px.
+1. You may notice that when you resize the screen some of the longer smiles
+  are split over multiple columns. To prevent this you may want to add
+```css 
+.smile {
+   display:inline-block;
+}
+```
 
 At this point if you open `index.html` it should look like this:
 
