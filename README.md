@@ -192,7 +192,7 @@ Now we'll handle incrementing the like count for the clicked on smile.
     add code to update the like count of the updated smile,
     based on the data returned by the POST request.
     - In case the server returns an error, you should call the function
-      "console.error()" with the error messages
+      "console.error()" with the error messages from the server
 
 
 <a name='post_like'>
@@ -280,7 +280,7 @@ just show it when users intend to share a smile.
           the newly added smile at the beginning of the
           current list of smiles. 
       - In case the server returns an error, you should call the function
-        "console.error()" with the error messages
+        "console.error()" with the error messages from the server
 
 <a name='post_create'>
 #### POST /api/smiles
