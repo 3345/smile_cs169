@@ -90,7 +90,7 @@ a new name that will give you your own smile space.
   - Smiles in the UI should be ordered so that the smile with the most likes
     show at the beginning.
   - In case the server returns an error, you should call the function
-    "console.error()" with the error messages
+    "console.error()" with the error messages from the server.
     
 1. Finish the implementation of `insertSmile`
   - You'll need to convert the created timestamp into a user-friendly format
@@ -154,10 +154,10 @@ If there were errors, then the response contains only two fields:
 ```
 
 The following error messages may be included for this request:
-* "space must be non-empty" (if the submitted "space" is missing or empty
+* "space must be non-empty" (if the submitted "space" is missing or an empty
   string)
 * "Invalid order_by" (if the `order_by` query parameter did not have one of
-  the values specified above
+  the values specified above)
 * "Invalid count" (if the `count` query parameter was neither the string
        "all", nor an integer greater than 0)
 
@@ -192,7 +192,7 @@ Now we'll handle incrementing the like count for the clicked on smile.
     add code to update the like count of the updated smile,
     based on the data returned by the POST request.
     - In case the server returns an error, you should call the function
-      "console.error()" with the error messages from the server
+      "console.error()" with the error messages from the server.
 
 
 <a name='post_like'>
@@ -280,7 +280,7 @@ just show it when users intend to share a smile.
           the newly added smile at the beginning of the
           current list of smiles. 
       - In case the server returns an error, you should call the function
-        "console.error()" with the error messages from the server
+        "console.error()" with the error messages from the server.
 
 <a name='post_create'>
 #### POST /api/smiles
