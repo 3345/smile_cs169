@@ -121,7 +121,7 @@ order_by: the name of the field by which to sort in decreasing order. One of:
 
 ##### Example Request
 ```
-GET /api/smiles?space=default&count=5&order_by=created_at
+GET /api/smiles?space=initial&count=5&order_by=created_at
 ```
 
 ##### Example Response
