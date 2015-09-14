@@ -78,17 +78,18 @@ a new name that will give you your own smile space.
    request to our Smile server to get the most recently created 10 smiles.
    - You will need to show the smiles sorted in decreasing order of the
       created time.
-  - Our API by default returns smiles by recently updated (e.g. if someone
+  - Our API by default returns smiles sorted with the most recently updated
+     smile first (e.g. if someone
     likes a smile, we update the updated_at timestamp).
     You'll need to pass in the right params to our API (see below for
-    documentation)
+    documentation) to get the proper sorting order. 
   - Please be aware that requests to Heroku backends sometimes take a
      few seconds to return, especially if the backend has not been
      used in a while.
 1. In `scripts/smiles.js`, fill in the function `onSuccess` in `displaySmiles`
    to sort the smiles returned from the server, and to call `insertSmile`. 
-  - Smiles in the UI should be ordered so that the smile with the most likes
-    show at the beginning.
+  - Smiles in the UI should be ordered so that the smile created most
+     recently shows at the beginning.
   - In case the server returns an error, you should call the function
     "console.error()" with the error messages from the server.
     
