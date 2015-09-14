@@ -85,7 +85,7 @@ a new name that will give you your own smile space.
   - Please be aware that requests to Heroku backends sometimes take a
      few seconds to return, especially if the backend has not been
      used in a while.
-1. In `scripts/smiles.js`, fill in the function `success` in `displaySmiles`
+1. In `scripts/smiles.js`, fill in the function `onSuccess` in `displaySmiles`
    to sort the smiles returned from the server, and to call `insertSmile`. 
   - Smiles in the UI should be ordered so that the smile with the most likes
     show at the beginning.
@@ -188,7 +188,7 @@ Now we'll handle incrementing the like count for the clicked on smile.
      - Upon success this POST request returns the updated JSON data
         for the smile that was liked.
 
-1. In the `success` handler in the `attachLikeHandler` function,
+1. In the `onSuccess` handler in the `attachLikeHandler` function,
     add code to update the like count of the updated smile,
     based on the data returned by the POST request.
     - In case the server returns an error, you should call the function
@@ -276,7 +276,7 @@ just show it when users intend to share a smile.
       - Add code to collect the remaining fields of the new smile
       - Add code at the end of the handler to make the POST
          request (see documentation below), and to close the form.
-       - Add code to the `success` handler to insert
+       - Add code to the `onSuccess` handler to insert
           the newly added smile at the beginning of the
           current list of smiles. 
       - In case the server returns an error, you should call the function
