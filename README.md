@@ -362,7 +362,8 @@ The following error messages may be included for this request:
 ### How to Submit
 ---
 
-Again, we'll use Github Pages to host your Smile app like you did in Part 1. 
+**UPDATE: We will NOT use GitHub pages for Part 2. Just push to the `part2`
+branch in your private repository.**
 
 1.  Commit your changes locally. Make sure you are in branch `part2`.
 
@@ -372,14 +373,4 @@ git push origin part2
 ```
    - You can submit multiple times, after intermediate tasks, but on the deadline
       you need to have submitted the end result.
-   
-1. Push the GitHub pages:
-```
-git push -f origin part2:gh-pages
-```
-    - Now your finished project should be up on http://your_username.github.io/smile_cs169/static
-    - We will use this url to see and grade your project. Please do not change
-      your gh-pages branch until you hear that we have graded Part 2.
 
-1. Watch Piazza and the class web site for the link to a form where you will
-   have to submit the url to your project. 
