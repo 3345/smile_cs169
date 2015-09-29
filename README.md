@@ -5,6 +5,46 @@
 Last part of the warmup project!
 Now you'll get to build your own server for the API and also hook it into your frontend app.
 
+### Task 0: Git branch structure
+
+You will have to develop the backend in the same working tree that you used
+for Part 1 and Part 2, so that you can submit your code to the same git
+repository.
+
+1. Create a local branch named `part3`, from your `part2` branch
+```
+git checkout -b part3
+```
+
+1. You will now be editing locally. If you need to move the files that you
+    had for Part 2, feel free to do so. And **remember to commit frequently**. 
+
+1. You will be deploying your application on Heroku.
+   and you will have to submit
+   the Heroku app URL to us. 
+   See [Heroku Deployment](https://sites.google.com/site/ucbcs169fa15/project/setting-up-a-deployment-site)
+   for more information on how to get started with the framework of your
+   choice, and with Heroku. **You do not have to run** the
+   `git init` command as explained in the Heroku instructions, because you
+   already have a git repo. Instead, after running `heroku create`, you should
+   verify that you have the `heroku` remote added to your local git:
+```
+git remote -v
+```
+
+    You should see output of the form:
+```
+heroku git@heroku.com:intense-mountain-1976.git (fetch)
+heroku git@heroku.com:intense-mountain-1976.git (push)
+origin         https://****/xx (fetch)
+origin         https://****/xx (push)
+```
+
+    where `intense-mountain-1976` is an example Heroku app name that Heroku will
+    create for you.
+
+1. Deploying the application to Heroku is a non-trivial
+   step, do not leave it for the last minute. 
 
 ### Task 1: Create the Model
 ---
@@ -161,18 +201,37 @@ You might need to adjust some routes depending on where assets and files are pla
 ### How to Submit
 ---
 
-You will be deploying your application on Heroku and you will have to submit
-the Heroku app URL to us. See [Heroku Deployment](https://sites.google.com/site/ucbcs169fa15/project/setting-up-a-deployment-site)
-for more information.
+The deployment and submission steps for the backend are a bit more complex,
+because you will need to deploy your code to Heroku as well as git.
 
-You must ensure that your site works. We
-will be running automated tests on it, using the smile space
-"cs169-grading-space". (Hint: try running the test yourself; there are no
-excuses if even the test we gave you is failing.)
+1. You must deploy your application to Heroku before the deadline. You can
+follow the standard Heroku instructions, with the exception of `git init` (as
+explained in Task 0 above) and the exact command to push your local repo to
+Heroku. Since you are using local branch `part3` you need to run the following
+command to push changes to Heroku:
+```
+git push heroku part3:refs/heads/master
+```
+    - You can deploy multiple times to Heroku, after intermediate tasks, but on the deadline
+      you need to have submitted the end result.
+   
+1. You must ensure that your site works. We
+will be running automated tests on it. (Hint: try running the test yourself; there are no
+excuses if the test we gave you is failing. Of course, we expect that you
+would add more tests of your own.)
 
-Watch Piazza and the class web site for the link to a form where you will
-have to submit the url to your project. 
+1. Watch Piazza and the class web site for the link to a form where you will
+   have to submit the Heroku url to your project. 
 
+1.  Commit your changes locally. Make sure you are in branch `part2`.
+
+1. Push the `part3` branch to GitHub:
+```
+git push origin part3
+```
+   - You can submit multiple times, after intermediate tasks, but on the deadline
+      you need to have submitted the end result.
+   
 
 .You are Done!
 ---
