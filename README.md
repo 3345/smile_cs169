@@ -362,8 +362,7 @@ The following error messages may be included for this request:
 ### How to Submit
 ---
 
-**UPDATE: We will NOT use GitHub pages for Part 2. Just push to the `part2`
-branch in your private repository.**
+Again, we'll use Github Pages to host your Smile app like you did in Part 1. 
 
 1.  Commit your changes locally. Make sure you are in branch `part2`.
 
@@ -373,4 +372,6 @@ git push origin part2
 ```
    - You can submit multiple times, after intermediate tasks, but on the deadline
       you need to have submitted the end result.
-
+   
+1. Watch Piazza and the class web site for the link to a form where you will
+   have to submit the url to your project. 

@@ -6,7 +6,6 @@ var Smile = (function() {
     // The backend we'll use for Part 2. For Part 3, you'll replace this 
     // with your backend.
     var apiUrl = 'https://smileback-cs169.herokuapp.com'; 
-
     // FINISH ME (Task 4): You can use the default smile space, but this means
     //            that your new smiles will be merged with everybody else's
     //            which can get confusing. Change this to a name that 
@@ -80,8 +79,9 @@ var Smile = (function() {
             smiles.append(newElem);
         }
     };
-    
-    /**
+
+
+     /**
      * Get recent smiles from API and display 10 most recent smiles
      * @return {None}
      */
