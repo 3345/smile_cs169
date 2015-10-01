@@ -5,7 +5,8 @@
 Last part of the warmup project!
 Now you'll get to build your own server for the API and also hook it into your frontend app.
 
-### Task 0: Git branch structure
+Task 0: Git branch structure
+---
 
 You will have to develop the backend in the same working tree that you used
 for Part 1 and Part 2, so that you can submit your code to the same git
@@ -24,15 +25,27 @@ git checkout -b part3
    the Heroku app URL to us. 
    See [Heroku Deployment](https://sites.google.com/site/ucbcs169fa15/project/setting-up-a-deployment-site)
    for more information on how to get started with the framework of your
-   choice, and with Heroku. **You do not have to run** the
-   `git init` command as explained in the Heroku instructions, because you
-   already have a git repo. Instead, after running `heroku create`, you should
+   choice, and with Heroku. 
+     - **Rails: To correctly set up the Rails project structure: ** Create a new rails
+     application external to the Smile folder using `rails new <app name>`.
+     Move the entire contents of the folder into the root of your repository
+     folder. (such that the app/, db/ folders are on the same level as the
+     original files in your Smile repo `smile_cs169/`) Treat this as your
+     Rails application file now and follow the rest of the Heroku deployment
+     instructions.
+      - **Django: To correctly set up the Django project structure: ** Just
+     follow the instructions from
+     [Heroku: Getting Started with Django](https://devcenter.heroku.com/articles/getting-started-with-django)
+
+After running `heroku create`, you should
    verify that you have the `heroku` remote added to your local git:
+<!-- -->
 ```
 git remote -v
 ```
 
-    You should see output of the form:
+You should see output of the form:
+<!-- -->
 ```
 heroku git@heroku.com:intense-mountain-1976.git (fetch)
 heroku git@heroku.com:intense-mountain-1976.git (push)
@@ -40,13 +53,13 @@ origin         https://****/xx (fetch)
 origin         https://****/xx (push)
 ```
 
-    where `intense-mountain-1976` is an example Heroku app name that Heroku will
-    create for you.
+where `intense-mountain-1976` is an example Heroku app name that Heroku will
+create for you.
 
-1. Deploying the application to Heroku is a non-trivial
-   step, do not leave it for the last minute. 
+**Deploying the application to Heroku is a non-trivial
+   step, do not leave it for the last minute.**
 
-### Task 1: Create the Model
+Task 1: Create the Model
 ---
 
 You will have to get started using one of the backends that are approved
@@ -70,7 +83,7 @@ other schemas may work just as well):
 | created_at          | float            | not null | You can use some other representation of time , as long as it does not depend on the local timezone, and it allows for sub-second precision. 
 | updated_at        | float             |  not null | You can use some other representation of time, as long as it does not depend on the local timezone, and it allows for sub-second precision. 
 
-.Task 2: Prepare the Automated Tests
+Task 2: Prepare the Automated Tests
 ---
 
 Before you start writing the code for the API, I strongly recommend that you spend
@@ -122,7 +135,7 @@ The testing framework is provided to you in the `testing` directory:
       current shell, and you do not need to pass them along each time.
     * You can specify a single test to run by adding the argument `testing.testBarely.TestSmiles.testAdd1`
 
-.Task 3: Create the Routes and Views
+Task 3: Create the Routes and Views
 ---
 
 Once you have the automated tests ready, you can now proceed to write the code
@@ -146,7 +159,8 @@ You will have to implement the following API entry points:
     - Delete all the smiles in a smile space. See specification below.
 
 <a name='delete_smiles'/>
-#### DELETE /api/smiles
+
+DELETE /api/smiles
 ---
 Gets the most recently updated smiles
 
@@ -183,7 +197,7 @@ The following error messages may be included for this request:
   string)
 
 
-### Task 4: Frontend Integration
+Task 4: Frontend Integration (Optional)
 ---
 
 Now let's integrate the frontend you built in Part 1-2 into your application.
@@ -197,8 +211,20 @@ ensure that the requests are sent to the same server from which the
 You should be able to get this part working by adding a new route, and adding the HTML page as a view, and copying over the Javascript, CSS, and images.
 You might need to adjust some routes depending on where assets and files are placed.
 
+**Rails Advice: ** There are two ways to do add assets on Rails: 
 
-### How to Submit
+1. **The hard, Rails convention way: ** Add a route for `index/`, create a
+   controller that servers your static html file in the appropriate `views/`
+   folder and make sure you remove any script `src=` or stylesheet `src=` in the
+   file, and place your JS and CSS, and image assets into the assets folders
+   `assets/javascripts` and `assets/stylesheets`, and `assets/images`
+   respectively.
+1. **The easy, anti-pattern way:** Put everything into the public folder.
+   Install the gem `rails_12factor` in the production group so it will work on
+   Heroku.
+
+
+How to Submit
 ---
 
 The deployment and submission steps for the backend are a bit more complex,
@@ -223,7 +249,7 @@ would add more tests of your own.)
 1. Watch Piazza and the class web site for the link to a form where you will
    have to submit the Heroku url to your project. 
 
-1.  Commit your changes locally. Make sure you are in branch `part2`.
+1.  Commit your changes locally. Make sure you are in branch `part3`.
 
 1. Push the `part3` branch to GitHub:
 ```
@@ -233,7 +259,7 @@ git push origin part3
       you need to have submitted the end result.
    
 
-.You are Done!
+You are Done!
 ---
 
 We hope you are smiling ! Let's get ready for the real project now. 
